@@ -1,0 +1,35 @@
+.slider {
+  @apply relative flex items-center justify-center gap-28;
+
+  &__graphic {
+    @apply relative flex flex-1 justify-end;
+  }
+
+  &__curve {
+    @apply absolute -left-8 bottom-0 right-10 top-0 z-0;
+
+    svg {
+      @apply relative block h-full w-full;
+
+      path {
+        @apply absolute bottom-0 left-0 right-0 top-0 block h-full w-full object-cover object-right;
+      }
+    }
+  }
+
+  &__icons {
+    @apply relative z-[1] flex;
+  }
+
+  &__icon {
+    @apply -mr-11 flex h-[195px] w-[195px] items-center justify-center rounded-full bg-primary shadow-[0px_8px_15px_0px_rgba(0,0,0,0.15)_inset];
+
+    &:nth-child(2n) {
+      @apply mt-48;
+    }
+
+    img {
+      @apply w-auto object-contain object-center;
+    }
+  }
+}
