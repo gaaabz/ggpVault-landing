@@ -103,7 +103,9 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className={styles.faqs}>
+      <section
+        className={`${styles.faqs} dark:bg-faq-pattern-dark dark:text-white`}
+      >
         <div className={styles.faqs__container}>
           <div className={styles.faqs__title}>
             <h2>Frequently asked questions</h2>
@@ -114,10 +116,13 @@ export default function Home() {
           </div>
           <div className={styles.faqs__list}>
             {faqs.map((faq, index) => (
-              <details key={index} className={styles.faqs__item}>
-                <summary>
+              <details
+                key={index}
+                className={`${styles.faqs__item} group dark:bg-[#2F2F2F]`}
+              >
+                <summary className="dark:text-white">
                   <span>{faq.title}</span>
-                  <span>
+                  <span className="dark:last:text-white group-open:dark:last:bg-white group-open:dark:last:text-[#2F2F2F]">
                     <IconUnion />
                   </span>
                 </summary>

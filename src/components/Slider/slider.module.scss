@@ -1,15 +1,15 @@
 .slider {
-  @apply relative flex items-center justify-center gap-28;
+  @apply relative flex max-w-[1100px] items-center justify-center gap-28 self-center;
 
   &__graphic {
     @apply relative flex flex-1 justify-end;
   }
 
   &__curve {
-    @apply absolute -left-8 bottom-0 right-10 top-0 z-0;
+    @apply absolute -left-8 bottom-0 right-10 top-0 z-0 text-primary;
 
     svg {
-      @apply relative block h-full w-full;
+      @apply absolute right-0 top-0 block object-cover object-right;
 
       path {
         @apply absolute bottom-0 left-0 right-0 top-0 block h-full w-full object-cover object-right;
@@ -22,14 +22,38 @@
   }
 
   &__icon {
-    @apply -mr-11 flex h-[195px] w-[195px] items-center justify-center rounded-full bg-primary shadow-[0px_8px_15px_0px_rgba(0,0,0,0.15)_inset];
+    @apply -mr-11 flex h-[195px] w-[195px] items-center justify-center rounded-full bg-[#FFFEED];
 
     &:nth-child(2n) {
       @apply mt-48;
     }
 
     img {
-      @apply w-auto object-contain object-center;
+      @apply w-auto object-contain object-center opacity-20;
+    }
+
+    &--active {
+      @apply bg-primary shadow-[0px_8px_15px_0px_rgba(0,0,0,0.15)_inset];
+
+      img {
+        @apply opacity-100;
+      }
+    }
+  }
+
+  &__texts {
+    @apply flex max-w-[380px] flex-col gap-10;
+  }
+
+  &__text {
+    @apply flex flex-col gap-4 text-left;
+
+    h3 {
+      @apply text-2xl font-bold;
+    }
+
+    p {
+      @apply text-xl;
     }
   }
 }

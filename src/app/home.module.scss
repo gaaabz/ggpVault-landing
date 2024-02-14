@@ -111,7 +111,7 @@
 
         span {
           &:last-child {
-            @apply rotate-90 transform;
+            @apply rotate-45 transform bg-black text-white;
           }
         }
       }
