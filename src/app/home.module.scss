@@ -1,0 +1,120 @@
+.yield {
+  @apply relative flex flex-col gap-36 overflow-hidden bg-white px-8 py-48 text-center;
+
+  &__gradient {
+    @apply absolute left-0 top-0 z-0 h-full w-full blur-sm;
+
+    background: radial-gradient(
+      circle at 12% 0%,
+      rgba(0, 194, 255, 0) 5%,
+      rgba(0, 194, 255, 0.7) 30%,
+      rgba(0, 194, 255, 0.1) 50%,
+      rgba(0, 194, 255, 0) 100%
+    );
+    content: '';
+  }
+
+  &::after {
+    @apply absolute left-0 top-0 z-0 h-full w-full bg-noise-10 bg-repeat;
+
+    content: '';
+  }
+
+  &__top {
+    @apply relative z-[1] flex flex-none flex-col items-center gap-14;
+  }
+
+  &__bottom {
+    @apply relative z-[1] flex flex-none flex-col gap-20;
+  }
+
+  &__title {
+    @apply flex flex-col items-center gap-8 text-black;
+
+    h1 {
+      @apply drop-shadow-md;
+
+      span {
+        @apply text-white;
+      }
+
+      & + p {
+        @apply max-w-[560px] text-lg;
+      }
+    }
+
+    h2 {
+      @apply max-w-[970px];
+
+      span {
+        @apply text-secondary;
+      }
+
+      & + p {
+        @apply max-w-[940px] text-xl;
+      }
+    }
+
+    p {
+      @apply leading-tight;
+    }
+  }
+}
+
+.creator {
+  @apply flex flex-col items-center gap-6 bg-creator-pattern-light bg-cover bg-center bg-no-repeat px-8 py-32 text-center text-black;
+
+  p {
+    @apply m-0 font-bold;
+  }
+
+  &__title {
+    @apply font-monument text-4xl font-black;
+  }
+}
+
+.faqs {
+  @apply bg-faq-pattern-light bg-cover bg-center bg-no-repeat px-8 py-32 text-black;
+
+  &__container {
+    @apply mx-auto flex max-w-[800px] flex-col gap-14;
+  }
+
+  &__title {
+    @apply flex flex-col gap-4;
+
+    p {
+      @apply text-xl;
+    }
+  }
+
+  &__list {
+    @apply flex flex-col gap-4;
+  }
+
+  &__item {
+    @apply cursor-pointer rounded-[20px] bg-white p-8;
+
+    summary {
+      @apply -m-8 flex cursor-pointer items-center justify-between p-8 text-xl font-bold;
+
+      span {
+        &:last-child {
+          @apply flex h-8 w-8 items-center justify-center rounded-full text-black;
+        }
+      }
+    }
+
+    &[open] {
+      summary {
+        @apply mb-0 pb-4;
+
+        span {
+          &:last-child {
+            @apply rotate-45 transform bg-black text-white;
+          }
+        }
+      }
+    }
+  }
+}

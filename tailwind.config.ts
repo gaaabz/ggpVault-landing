@@ -1,9 +1,10 @@
-import formsPlugin from '@tailwindcss/forms'
 import headlessuiPlugin from '@headlessui/tailwindcss'
+import formsPlugin from '@tailwindcss/forms'
 import { type Config } from 'tailwindcss'
 
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: 'class',
   theme: {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -21,15 +22,33 @@ export default {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     extend: {
+      backgroundImage: {
+        noise: "url('/bg-noise.webp')",
+        'noise-30': "url('/bg-noise-30.webp')",
+        'noise-20': "url('/bg-noise-20.webp')",
+        'noise-10': "url('/bg-noise-10.webp')",
+        'hero-pattern-light': "url('/hero-bg-noise-light.webp')",
+        'hero-pattern-dark': "url('/hero-bg-noise-dark.webp')",
+        'creator-pattern-light': "url('/earn-free-bg-noise-light.webp')",
+        'creator-pattern-dark': "url('/earn-free-bg-noise-dark.webp')",
+        'faq-pattern-light': "url('/faq-bg-noise-light.webp')",
+        'faq-pattern-dark': "url('/faq-bg-noise-dark.webp')",
+      },
       borderRadius: {
         '4xl': '2rem',
       },
       fontFamily: {
-        sans: 'var(--font-inter)',
+        sans: ['Satoshi', 'sans-serif'],
         display: 'var(--font-lexend)',
+        monument: ['Monument Extended', 'sans-serif'],
       },
       maxWidth: {
         '2xl': '40rem',
+      },
+      colors: {
+        primary: '#FFF500',
+        secondary: '#00C2FF',
+        dark: '#002026',
       },
     },
   },
