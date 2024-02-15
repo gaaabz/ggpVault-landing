@@ -1,3 +1,4 @@
+import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import '@/styles/tailwind.css'
 import clsx from 'clsx'
@@ -24,6 +25,7 @@ export default function RootLayout({
         <body>
           <Header />
           {children}
+          <Footer />
         </body>
       </html>
     </Providers>

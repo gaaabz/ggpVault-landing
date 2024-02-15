@@ -78,10 +78,10 @@ const Header = () => {
           </div>
           <div className={styles.header__bar}>
             <nav className={`${styles.header__nav} dark:text-white`}>
-              <Link href="#">Docs</Link>
-              <Link href="#">FAQs</Link>
+              <Link href="https://docs.seafi.app">Docs</Link>
+              <Link href="#faqs">FAQs</Link>
               <Link
-                href="#"
+                href="https://app.seafi.app"
                 className={`${styles.header__button} dark:border-white`}
               >
                 Launch app
