@@ -54,7 +54,7 @@ export default function Home() {
             </h1>
             <p>Stake your GGP for ~20% APY.</p>
           </div>
-          <Link href="#" className="button">
+          <Link href="https://app.seafi.app" className="button">
             Stake GGP Now
           </Link>
           <Image
@@ -87,13 +87,14 @@ export default function Home() {
       >
         {/* <p>Are you a digital creator?</p> */}
         <h2 className={styles.creator__title}>Start Earning Rewards</h2>
-        <Link href="#" className="button dark:bg-secondary">
+        <Link href="https://app.seafi.app" className="button dark:bg-secondary">
           Deposit GGP
         </Link>
       </section>
 
       <section
         className={`${styles.faqs} dark:bg-faq-pattern-dark dark:text-white`}
+        id="faqs"
       >
         <div className={styles.faqs__container}>
           <div className={styles.faqs__title}>

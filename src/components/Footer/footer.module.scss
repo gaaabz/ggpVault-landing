@@ -1,0 +1,11 @@
+.footer {
+  @apply flex items-center justify-between px-8 py-32 text-xs;
+
+  &__logo {
+    @apply max-w-[190px] flex-1;
+
+    svg {
+      @apply block h-auto w-full;
+    }
+  }
+}
