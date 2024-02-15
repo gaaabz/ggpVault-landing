@@ -39,9 +39,8 @@ const Slider = () => {
         <div className={styles.slider__text}>
           <h3 className="dark:text-primary">Withdraw Whenever</h3>
           <p>
-            Withdraws are possible anytime except the 3 days before a rewards
-            period. Earned Rewards will be avaliable immedately after the
-            rewards period ends.
+            Withdraw anytime as long as there is liquidity in the vault. Read
+            more about the liquidity strategy: https://docs.ggpVault.com
           </p>
         </div>
       </div>

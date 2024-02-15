@@ -6,11 +6,11 @@ import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - ggGGP',
-    default: 'ggGGP - Accounting made simple for small businesses',
+    template: '%s - xGGP',
+    default: 'xGGP - Earn yield on your GGP',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Earn GGP every rewards cycle, without running a minipool or staking AVAX',
 }
 
 export default function RootLayout({
