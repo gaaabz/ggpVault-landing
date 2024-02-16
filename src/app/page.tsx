@@ -40,7 +40,7 @@ const faqs = [
   {
     title: 'Is xGGP fully permissionless?',
     content:
-      "No - the contracts are upgradable SeaFi LLC's 2:3 multisig and the GGP is being staked on nodes operated by the SeaFi team.",
+      "No - the contracts are upgradable by SeaFi LLC's 2:3 multisig and the GGP is being staked on nodes operated by the SeaFi team.",
   },
 ]
 
