@@ -9,7 +9,7 @@ const faqs = [
   {
     title: 'Has xGGP been audited?',
     content:
-      'Yes - we did two indepedent audits that can be viewed on our github or in our docs. ',
+      'Yes - we did two private audits that can be viewed on our github or in our docs.',
   },
 
   {
@@ -35,7 +35,12 @@ const faqs = [
   {
     title: 'How does it work?',
     content:
-      'We are opperating several GoGoPool minipools alongside this vault. We supply the Avax and handle the opperation of the nodes, and use the vault GGP to stake on those nodes. Yield comes from the GGP rewards cycles.',
+      'We are operating several GoGoPool minipools alongside this vault. We supply the Avax and handle the operation of the nodes, and use the vault GGP to stake on those nodes. Yield comes from the GGP rewards cycles.',
+  },
+  {
+    title: 'Is xGGP fully permissionless?',
+    content:
+      "No - the contracts are upgradable SeaFi LLC's 2:3 multisig and the GGP is being staked on nodes operated by the SeaFi team.",
   },
 ]
 
