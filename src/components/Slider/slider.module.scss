@@ -1,15 +1,15 @@
 .slider {
-  @apply relative flex max-w-[1100px] items-center justify-center gap-28 self-center;
+  @apply relative flex max-w-[1100px] flex-col items-center justify-center gap-12 self-center md:flex-row md:gap-28;
 
   &__graphic {
-    @apply relative flex flex-1 justify-end;
+    @apply relative flex w-full flex-1 justify-end;
   }
 
   &__curve {
-    @apply absolute -left-8 bottom-0 right-10 top-0 z-0 text-primary;
+    @apply absolute -left-8 bottom-0 right-12 top-0 z-0 text-primary md:right-10;
 
     svg {
-      @apply absolute right-0 top-0 block object-cover object-right;
+      @apply absolute right-0 top-0 block h-40 w-auto object-cover object-right md:h-auto;
 
       path {
         @apply absolute bottom-0 left-0 right-0 top-0 block h-full w-full object-cover object-right;
@@ -22,14 +22,14 @@
   }
 
   &__icon {
-    @apply -mr-11 flex h-[195px] w-[195px] items-center justify-center rounded-full bg-[#FFFEED];
+    @apply -mr-2 flex h-[86px] w-[86px] flex-none items-center justify-center rounded-full bg-[#FFFEED] md:-mr-11 md:h-[195px] md:w-[195px];
 
     &:nth-child(2n) {
-      @apply mt-48;
+      @apply mt-20 md:mt-48;
     }
 
     img {
-      @apply w-auto object-contain object-center opacity-20;
+      @apply h-[52px] w-[52px] object-contain object-center opacity-20 md:h-auto md:w-auto;
     }
 
     &--active {

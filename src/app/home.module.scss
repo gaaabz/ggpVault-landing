@@ -1,5 +1,5 @@
 .yield {
-  @apply relative flex flex-col gap-36 overflow-hidden bg-white px-8 py-48 text-center;
+  @apply relative flex flex-col gap-36 overflow-hidden bg-white px-6 pb-24 pt-48 text-center md:px-8 md:py-48;
 
   &__gradient {
     @apply absolute left-0 top-0 z-0 h-full w-full blur-sm;
@@ -39,7 +39,7 @@
       }
 
       & + p {
-        @apply max-w-[560px] text-lg;
+        @apply max-w-[560px] text-xl;
       }
     }
 
@@ -62,19 +62,19 @@
 }
 
 .creator {
-  @apply flex flex-col items-center gap-6 bg-creator-pattern-light bg-cover bg-center bg-no-repeat px-8 py-32 text-center text-black;
+  @apply flex flex-col items-center gap-6 bg-creator-pattern-light bg-cover bg-center bg-no-repeat px-6 py-32 text-center text-black md:px-8;
 
   p {
     @apply m-0 font-bold;
   }
 
   &__title {
-    @apply font-monument text-4xl font-black;
+    @apply font-monument text-3xl font-black md:text-4xl;
   }
 }
 
 .faqs {
-  @apply bg-faq-pattern-light bg-cover bg-center bg-no-repeat px-8 py-32 text-black;
+  @apply bg-faq-pattern-light bg-cover bg-center bg-no-repeat px-6 py-24 text-black md:px-8 md:py-32;
 
   &__container {
     @apply mx-auto flex max-w-[800px] flex-col gap-14;
@@ -84,7 +84,7 @@
     @apply flex flex-col gap-4;
 
     p {
-      @apply text-xl;
+      @apply text-base md:text-xl;
     }
   }
 
@@ -96,7 +96,7 @@
     @apply cursor-pointer rounded-[20px] bg-white p-8;
 
     summary {
-      @apply -m-8 flex cursor-pointer items-center justify-between p-8 text-xl font-bold;
+      @apply -m-8 flex cursor-pointer items-center justify-between p-8 text-lg font-bold md:text-xl;
 
       span {
         &:last-child {

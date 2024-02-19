@@ -1,8 +1,20 @@
 .footer {
-  @apply flex items-center justify-between px-8 py-32 text-xs;
+  @apply flex flex-col items-center justify-between gap-8 px-8 py-32 text-xs md:flex-row;
+
+  p {
+    @apply font-medium;
+
+    &:nth-child(1) {
+      @apply order-2 md:order-1;
+    }
+
+    &:nth-child(3) {
+      @apply order-3;
+    }
+  }
 
   &__logo {
-    @apply max-w-[190px] flex-1;
+    @apply order-1 max-w-[190px] flex-1 md:order-2;
 
     svg {
       @apply block h-auto w-full;

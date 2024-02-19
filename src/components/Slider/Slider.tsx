@@ -10,7 +10,8 @@ const Slider = () => {
     <div className={styles.slider}>
       <div className={styles.slider__graphic}>
         <div className={`${styles.slider__curve} dark:text-white`}>
-          <Curve />
+          <Curve classNames="hidden md:block" strokeWidth="2" />
+          <Curve classNames="block md:hidden" strokeWidth="4" />
         </div>
         <div className={styles.slider__icons}>
           <div
