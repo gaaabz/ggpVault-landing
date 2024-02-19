@@ -19,20 +19,32 @@
     }
   }
 
+  &__logomobile {
+    @apply relative z-[1] block h-10 w-10 text-black md:hidden;
+
+    svg {
+      @apply block h-full w-full object-contain object-center transition-all duration-500 ease-in-out;
+    }
+  }
+
   &__bar {
-    @apply flex items-center justify-end gap-8;
+    @apply flex items-center justify-end gap-6 md:gap-8;
   }
 
   &__nav {
-    @apply flex items-center gap-14 text-black;
+    @apply fixed left-0 right-0 top-0 flex h-svh -translate-x-full flex-col gap-8 bg-white px-8 py-36 text-2xl text-black transition-all duration-500 ease-in-out md:static md:left-auto md:right-auto md:top-auto md:h-auto md:translate-x-0 md:flex-row md:items-center md:gap-14 md:bg-transparent md:px-0 md:py-0 md:text-base;
 
-    a {
-      @apply font-medium;
+    &--open {
+      @apply translate-x-0;
+    }
+
+    &--active {
+      @apply font-black;
     }
   }
 
   &__button {
-    @apply rounded-full border border-black px-8 py-4 leading-tight;
+    @apply relative z-[1] rounded-full border border-black px-6 py-4 text-sm font-semibold leading-tight transition-all duration-500 ease-in-out md:px-8 md:text-base;
 
     &:hover {
       @apply bg-primary text-black;
@@ -40,7 +52,7 @@
   }
 
   &__mode {
-    @apply relative flex items-center gap-2 rounded-full border border-black p-[6px];
+    @apply fixed left-8 top-[calc(100vh-2rem-42px)] flex -translate-x-[calc(100vw_+_2rem)] items-center gap-2 rounded-full border border-black p-[6px] transition-all duration-500 ease-in-out md:relative md:left-auto md:top-auto md:translate-x-0;
 
     span {
       @apply relative flex h-7 w-7 items-center justify-center transition-all;
@@ -78,6 +90,34 @@
           @apply text-black;
         }
       }
+    }
+
+    &--open {
+      @apply translate-x-0;
+    }
+  }
+
+  &__hamburger {
+    @apply relative z-[1] flex h-6 w-6 cursor-pointer flex-col justify-center gap-1 px-[2px] md:hidden;
+
+    &--open {
+      span {
+        &:first-child {
+          @apply translate-y-[6px] rotate-45 transform;
+        }
+
+        &:nth-child(2) {
+          @apply opacity-0;
+        }
+
+        &:last-child {
+          @apply -translate-y-[6px] -rotate-45 transform;
+        }
+      }
+    }
+
+    span {
+      @apply block h-[2px] w-full rounded-full bg-black transition-all duration-300 ease-in-out;
     }
   }
 }
