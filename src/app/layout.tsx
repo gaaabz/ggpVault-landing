@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     template: '%s - xGGP',
     default: 'xGGP - Earn yield on your GGP',
   },
+  icons: {
+    icon: '/favicon.webp',
+  },
   description:
     'Earn GGP every rewards cycle, without running a minipool or staking AVAX',
 }
