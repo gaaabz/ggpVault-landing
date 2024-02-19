@@ -92,7 +92,7 @@
 
 /* Generals */
 h1 {
-  @apply font-monument text-3xl font-black md:text-[56px];
+  @apply font-monument text-3xl font-black leading-tight md:text-[56px];
 }
 
 h2 {
